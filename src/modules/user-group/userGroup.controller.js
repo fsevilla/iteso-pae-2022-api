@@ -1,26 +1,26 @@
-const UsersController = {
+const UserGroupsController = {
     getAll: (req, res) => {
-        res.send('will get users');
+        res.send('will get user groups');
     },
     get: (req, res) => {
         const id = req.params.id;
-        res.send(`${id} user info`);
+        res.send(`${id} user group info`);
     },
     create: (req, res) => {
         res.send({});
     },
     update: (req, res) => {
         const id = req.params.id;
-        res.send(`${id} user updated`);
+        res.send(`${id} user group updated`);
     },
     patch: (req, res) => {
         const id = req.params.id;
-        res.send(`${id} user patched`);
+        res.send(`${id} user group patched`);
     },
     delete: (req, res) => {
         const id = req.params.id;
-        res.send(`${id} user deleted`);
+        res.send(`${id} user group deleted`);
     }
 }
 
-module.exports = UsersController;
+module.exports = UserGroupsController;

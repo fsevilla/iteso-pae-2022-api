@@ -1,26 +1,26 @@
-const UsersController = {
+const RolController = {
     getAll: (req, res) => {
-        res.send('will get users');
+        res.send('will get rols');
     },
     get: (req, res) => {
         const id = req.params.id;
-        res.send(`${id} user info`);
+        res.send(`${id} rol info`);
     },
     create: (req, res) => {
         res.send({});
     },
     update: (req, res) => {
         const id = req.params.id;
-        res.send(`${id} user updated`);
+        res.send(`${id} rol updated`);
     },
     patch: (req, res) => {
         const id = req.params.id;
-        res.send(`${id} user patched`);
+        res.send(`${id} rol patched`);
     },
     delete: (req, res) => {
         const id = req.params.id;
-        res.send(`${id} user deleted`);
+        res.send(`${id} rol deleted`);
     }
 }
 
-module.exports = UsersController;
+module.exports = RolController;

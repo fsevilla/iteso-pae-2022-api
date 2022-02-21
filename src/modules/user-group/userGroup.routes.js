@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const controller = require('./channels.controller');
+const controller = require('./userGroup.controller');
 
 router.get('/', controller.getAll);
 router.get('/:id', controller.get);

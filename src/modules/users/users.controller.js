@@ -1,12 +1,18 @@
 const UsersController = {
     getAll: (req, res) => {
-        res.send('will get users');
+        res.send('Will get users');
+    },
+    getOne: (req, res) => {
+        res.send('Will get "' + req.params.id + '" user');
     },
     create: (req, res) => {
-        res.send({});
+        res.send('Will create user');
     },
     update: (req, res) => {
-
+        res.send('Will update user');
+    },
+    delete: (req, res) => {
+        res.send('Will delete user');
     }
 }
 

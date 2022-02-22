@@ -3,10 +3,10 @@ const ChannelsController = {
         res.send('will get channels');
     },
     create: (req, res) => {
-        res.send({});
+        res.send('will create channels');
     },
     update: (req, res) => {
-        res.send({});
+        res.send('will update channels');
     }
 }
 

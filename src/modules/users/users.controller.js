@@ -3,10 +3,11 @@ const UsersController = {
         res.send('will get users');
     },
     create: (req, res) => {
-        res.send({});
+        console.log(req.body);
+        res.send('create users endpoint');
     },
     update: (req, res) => {
-
+        res.send('update users endpoint');
     }
 }
 

@@ -14,83 +14,73 @@ Core:
     Socket
     Log?
 
-modules:
+Cruds:
 
 
-///
+//////////////////////
 
 app/
-    storage/
-        images/
-        files/
     src/
-        core
-            database/
-            config/
-            log/
-            files/
-                file.js 
-
-
-        modules
-            users
-                user.model.js // Schema
-                users.controller.js // Endpoint methods 
-                // user.service.js (CRUD actions)
-                users.routes.js
-                validations/
-                    login.validation 
-                    ...
+        controllers
+        models
+        views
         routes
-            api.js
-
-
-
-
-GET api.com/usuarios (endpoint)
-POST api.com/usuarios
-
-routes:
-    GET /usuarios
-
-
-
-ROUTES
-// usuarios
-    GET /usuarios => [authMiddleware, otroMiddleware] =>  usersController.getAll 
-    POST /usuarios => usersController.create 
-    PUT /usuarios => usersController.update
-
-// groups
-    GET /groups => groupsController.getAll
-    POST /groups  => groupsController.create
-    PUT /groups => groupsController.update
-
 
 
     package.json
     app.js
 
 
-Models 
-    User 
+//Barush Method
+app/
+    src/
+        core/
+            database/
+            config/
+            log/
+            files/
+
+        modules/
+            users/
+                user.model.js //Schema
+                user.controller.js //Endpoint Methods
+                user.service.js (CRUD Actions)
+                user.routes.js
+                validations/
+                    login.validation
+                    ...
+        routes/
+            api.js
+    package.json
+    app.js
+
+
+GET api.com/usuarios (Endpoint)
+POST api.com/usuarios
+
+routes:
+    GET     /usuarios
+
+ROUTES
+// usuarios
+    GET     /usuarios => [authMiddleware, otroMiddleware] => userController.getAll
+    POST    /usuarios => userController.create
+    PUT     /usuarios => userController.update
+
+Models
+    User
         () => {
             DB.init('users')
         }
 
-Users.Controller 
+Users.Controller
 
     getAll() {
-        return User.query()
+        return Database.query('users')
     }
 
     create(data) {
-        User.create({
+        Model.create({
             username: 'Juan'
         })
     }
-
-
-GET /usuarios => usersController.getAll 
-
-app.put('/usuarios', usersController.update )

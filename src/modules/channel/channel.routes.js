@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const ChannelsController = require('./channels.controller');
+const controller = require('./channel.controller');
 
-router.get('/', ChannelsController.getAll);
+router.get('/', controller.getAll);
 
 module.exports = router;

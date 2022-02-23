@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const ChannelsController = require('./channels.controller');
+const ChannelsController = require('./rooms.controller');
 
 router.get('/', ChannelsController.getAll);
 router.get('/:id', ChannelsController.getById );

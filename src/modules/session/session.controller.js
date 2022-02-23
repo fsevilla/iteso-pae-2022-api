@@ -1,6 +1,6 @@
-const ChannelsController = {
+const sessionController = {
     getAll: (req, res) => {
-        res.send('will get channels');
+        res.send('will get session');
     },
     getById: (req, res) => {
         res.send('will get channel by id' + req.params.id);
@@ -16,4 +16,4 @@ const ChannelsController = {
     }
 }
 
-module.exports = ChannelsController;
+module.exports = sessionController;

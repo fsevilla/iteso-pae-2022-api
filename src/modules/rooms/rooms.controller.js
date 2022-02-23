@@ -1,18 +1,19 @@
-const UsersController = {
+const roomsController = {
     getAll: (req, res) => {
-        res.send('will get users');
+        res.send('will get rooms');
     },
     getById: (req, res) => {
-        res.send('will get user by id' + req.params.id);
+        res.send('will get channel by id' + req.params.id);
     },
     create: (req, res) => {
-        res.send({});
+        res.send("Create channel");
     },
-    update: (req, res) => {      
+    update: (req, res) => {
         res.send( "updated" + req.params.id);
     },
     delete: (req,res) => {
         res.send("deleted" + req.params.id);
-    }};
-    
-module.exports = UsersController;
+    }
+}
+
+module.exports = roomsController;

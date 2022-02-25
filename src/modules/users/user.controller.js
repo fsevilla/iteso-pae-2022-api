@@ -15,5 +15,5 @@ const UsersController = {
         res.send(`Usuario ${req.idUser} Eliminado`);
     }
 }
-
+    
 module.exports = UsersController;
